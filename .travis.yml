@@ -1,0 +1,22 @@
+language: python
+
+python:
+  - 2.6
+  - 2.7
+  - 3.2
+  - 3.3
+  - 3.4
+  - 3.5
+
+install:
+  - pip install coveralls
+  - pip install --upgrade pytest
+
+script:
+  - coverage run --source=eccsnacks setup.py test
+
+after_success:
+  coveralls
+
+notifications:
+  email: false
