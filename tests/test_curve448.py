@@ -2,7 +2,7 @@ from binascii import unhexlify, hexlify
 
 import pytest
 
-from curve448 import scalarmult, scalarmult_base
+from eccsnacks.curve448 import scalarmult, scalarmult_base
 
 
 # From RFC7748 section 5.2:
