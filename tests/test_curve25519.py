@@ -1,8 +1,19 @@
-from binascii import unhexlify, hexlify
+from binascii import unhexlify, hexlify as _hexlify
 
 import pytest
+import sys
 
 from eccsnacks.curve25519 import scalarmult, scalarmult_base
+
+
+# sigh, python 3 nonsense.
+if sys.version_info < (3,):
+    hexlify = _hexlify
+else:
+    import codecs
+
+    def hexlify(x):
+        return _hexlify(codecs.latin_1_encode(x)[0])
 
 
 # From RFC7748 section 5.2:
