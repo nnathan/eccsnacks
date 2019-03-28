@@ -4,7 +4,7 @@ import sys
 
 setup(
     name="eccsnacks",
-    version="1.0.1",
+    version="1.0.2",
     url="http://github.com/nnathan/eccsnacks",
 
     author="Naveen Nathan",
