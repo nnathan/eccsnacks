@@ -1,3 +1,7 @@
+import sys
+if sys.version_info >= (3,):
+    xrange = range
+
 __all__ = ['scalarmult', 'scalarmult_base']
 
 # implementation is a translation of the pseudocode
